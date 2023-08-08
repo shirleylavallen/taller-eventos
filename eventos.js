@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function(){
     const element = document.getElementsByTagName("div")[0];
-    element.addEventListener("click", function() {
-        alert("Hola! Soy el div");
+    const boton = document.getElementById('boton');
+    element.addEventListener("click", function(ev) {
+        //if(ev.target != boton){
+            alert("Hola! Soy el div");
+        //}
+        ev.stopImmediatePropagation();
     }); 
 })
